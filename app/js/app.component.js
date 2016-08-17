@@ -1,4 +1,4 @@
-System.register(['angular2/core', './config.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './config.service', './video', './playlist.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './config.service'], function(exports_1, conte
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, config_service_1;
+    var core_1, config_service_1, video_1, playlist_component_1;
     var AppComponent;
     return {
         setters:[
@@ -19,16 +19,27 @@ System.register(['angular2/core', './config.service'], function(exports_1, conte
             },
             function (config_service_1_1) {
                 config_service_1 = config_service_1_1;
+            },
+            function (video_1_1) {
+                video_1 = video_1_1;
+            },
+            function (playlist_component_1_1) {
+                playlist_component_1 = playlist_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
                     this.myHeading = config_service_1.ConfigSettings.MAIN_TITLE;
+                    this.myVideoArray = [
+                        new video_1.Video(1, "first video", "f8qBeaGe2S4", "learning angular 2"),
+                        new video_1.Video(2, "second video", "f8qBeaGe2S4", "learning angular 2")
+                    ];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>{{myHeading}}</h1>'
+                        templateUrl: 'app/ts/app.component.html',
+                        directives: [playlist_component_1.PlaylistComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

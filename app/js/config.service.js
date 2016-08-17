@@ -11,7 +11,7 @@ System.register([], function(exports_1, context_1) {
             ConfigSettings = (function () {
                 function ConfigSettings() {
                 }
-                ConfigSettings.MAIN_TITLE = "Hello World";
+                ConfigSettings.MAIN_TITLE = "My Videos";
                 return ConfigSettings;
             }());
             exports_1("ConfigSettings", ConfigSettings);

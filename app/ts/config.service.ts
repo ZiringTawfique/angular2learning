@@ -3,6 +3,6 @@
  */
 
 export class ConfigSettings {
- static MAIN_TITLE: string = "Hello World" ;
+ static MAIN_TITLE: string = "My Videos" ;
 
 }
